@@ -9,6 +9,11 @@ const TaskSchema = new Schema({
   },
   description: {
     type: String,
+    required: true
+  },
+  gitLink: {
+    type: String,
+    required: true
   },
   isDone: {
     type: Boolean,

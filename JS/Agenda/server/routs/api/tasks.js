@@ -35,9 +35,9 @@ router.get('/count', (req, res) => {
 // @desc    Create a Task
 // @access  Private
 router.post('/', (req, res) => {
-    const { title, description, userID } = req.body;
-    task.createTask(title, description, userID)
-        .then(item => res.json(item));
+    const { title, description, gitLink, userID } = req.body;
+    task.createTask(title, description, userID, gitLink)
+        .then(task => res.json(task));
 });
 
 // @route   PUT api/task/:id

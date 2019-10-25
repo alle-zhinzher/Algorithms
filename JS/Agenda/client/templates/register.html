@@ -12,9 +12,17 @@
     <div class="auth-wrapp">
         <h1>register</h1>
         <form id="form-register" action="#">
-            <input id="regUsername" class="form__input home-form" type="text" placeholder="username"><br />
-            <input id="regEmail" class="form__input home-form" type="email" placeholder="email"><br />
-            <input id="regPassword" class="form__input home-form" type="password" placeholder="password"><br />
+            <label for="regUsername">Username</label><br />
+            <input id="regUsername" class="form__input home-form" name="username" type="text"
+                placeholder="username"><br />
+            <label for="regEmail">Email</label><br />
+            <input id="regEmail" class="form__input home-form" name="email" type="email" placeholder="email"><br />
+            <label for="regPassword1">Password</label><br />
+            <input id="regPassword1" class="form__input home-form" name="password1" type="password"
+                placeholder="password" autocomplete="username email"><br />
+            <label for="regPassword2">Password Again</label><br />
+            <input id="regPassword2" class="form__input home-form" name="password2" type="password"
+                placeholder="password again" autocomplete="username email"><br />
             <button id="regSubmit" class="rigister__button" type="submit">register now</button>
         </form>
     </div>

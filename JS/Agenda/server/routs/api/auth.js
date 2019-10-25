@@ -13,12 +13,13 @@ router.post('/', (req, res) => {
     const { email, password } = req.body;
     users.getUserByEmail(email)
         .then(user => {
-            if(!user) {res.status(404).send({ msg: "User not found" })}
+            if (!user) { res.status(404).send({ msg: "User not found" }) }
             const passwordIsValid = bcActions.comparePasswords(password, user.password)
+            console.log(passwordIsValid)
             passwordIsValid ?
-                res.status(401).send({ msg: "Password does not match" })
+                res.status(200).send({ token: genToken(user._id), user })
                 :
-                res.status(200).send({ token: genToken(user._id), user });
+                res.status(401).send({ msg: "Password does not match" })
         })
 });
 

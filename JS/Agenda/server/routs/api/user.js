@@ -9,11 +9,17 @@ const router = express.Router();
 // @desc    Register a new User
 // @access  Public
 router.post('/', (req, res) => {
-    const {username, email, password} = req.body;
-    users.registerUser(username, email, password)
+    const { username, email, password } = req.body;
+    users.getUserByEmail(email)
         .then(user => {
-            res.status(200).send({ auth: true, token: genToken(user._id), user });
-        });
+            user ?
+                res.status(403).send({ msg: "User with this email already exists" })
+                :
+                users.registerUser(username, email, password)
+                    .then(user => {
+                        res.status(200).send({ auth: true, token: genToken(user._id), user });
+                    });
+        })
 });
 
 // @route   GET api/users

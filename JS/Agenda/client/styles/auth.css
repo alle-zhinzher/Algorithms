@@ -12,13 +12,14 @@ h1 {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 form {
+    position: relative;
     display: block;
     padding: 20px;
     width: 60%;
     margin: 25px auto;
     padding: 20px;
     border: 2px dashed rgb(255, 255, 255);
-    border-radius: 10px;
+    border-radius: 20px;
 }
 
 #form-login {
@@ -31,19 +32,24 @@ form {
     border: 2px dashed rgb(25, 75, 40);
 }
 
+label {
+    display: inline-block;
+    width: 100%;
+    font-size: 24px;
+}
+
 .form__input{
-    width: 300px;
-    height: 30px;
-    padding: 5px;
-    margin-bottom: 5px;
-    font-size: 16px;
-    border-radius: 10px;
+    width: 80%;
+    height: 40px;
+    padding: 15px;
+    margin-bottom: 15px;
+    font-size: 20px;
+    border-radius: 15px;
     border: none
 }
 .login__button {
-    width: 300px;
-    height: 30px;
-    
+    width: 80%;
+    height: 50px;
     background-color: rgb(82, 120, 255);
     border-color: rgb(76, 3, 245);
 }
@@ -56,8 +62,10 @@ form {
 
 
 .rigister__button {
-    width: 300px;
-    height: 30px;
+    width: 80%;
+    height: 50px;
+    margin: 15px 0;
+    font-size: 18px;
     background-color: rgb(75, 114, 92);
     color: beige;
     border-color: rgb(44, 90, 63);
@@ -75,4 +83,48 @@ button {
     font-size: 14px;
     text-transform: uppercase;
     transition: ease 0.5s;
+}
+
+.error-wrapper, .success-wrapper {
+    padding: 0;
+    z-index: 1;
+    position: absolute;
+    top: 150px;
+    left: 5%;
+    width: 90%;
+    height: 200px;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 22px;
+    border-radius: 20px;
+    background-color: rgb(204, 203, 197);
+}
+
+.success-heading {
+    margin: 0;
+    padding-top: 10px; 
+    background-color: rgb(125, 146, 112);
+    font-size: 24px;
+    height: 50px;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+
+.error-heading {
+    margin: 0;
+    padding-top: 10px; 
+    background-color: rgb(175, 107, 107);
+    font-size: 24px;
+    height: 50px;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+
+.error-msg, .success-msg {
+    font-size: 22px;
+    margin-top: 50px;
+}
+
+.error-disable {
+    display: none;
 }

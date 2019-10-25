@@ -13,11 +13,31 @@
     <div class="task-wrapper">
         <h1>My tasks list</h1>
         <ul id="task-list" class="task-list task">
-
+            <li class="item">
+                <section class="item__wrapper">
+                    <h3 class="item__task">Task text</h3>
+                    <p class="item__desc">Task Description</p><br />
+                </section>
+                <section class="item__wrapper button__wrapper">
+                    <a class="item__button button button__code" href="">view code</a>
+                    <button class="item__button button button__update">update</button>
+                    <button class="item__button button button__delete">delete</button>
+                </section>
+                <form calss="item__form form" action="#">
+                    <input class="form__input" name="title" type="text" placeholder="text"><br />
+                    <input class="form__input" name="description" type="text" placeholder="text"><br />
+                    <button class="form__button" type="submit">update</button>
+                </form>
+            </li>
         </ul>
         <form id="createUserTask" calss="item__form form" action="#">
-            <label for="createTaskInput">Create New Task</label> <br />
-            <input id="createTaskInput" class="form__input" type="text" placeholder="text"><br />
+            <label for="createTaskTitle">Create New Task</label><br />
+            <input id="createTaskTitle" class="form__input" type="text" name="title" placeholder="Title"><br />
+            <label for="createTaskDisc">Description</label><br />
+            <input id="createTaskDisc" class="form__input" type="text" name="description"
+                placeholder="Description"><br />
+            <label for="createTaskLink">Git Hub Link</label><br />
+            <input id="createTaskLink" class="form__input" type="url" name="gitLink" placeholder="Git Hub Link"><br />
             <button class="form__button button__create" type="submit">create</button>
         </form>
     </div>

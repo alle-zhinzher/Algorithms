@@ -7,7 +7,11 @@ const getTasksCount = (userID) => Task.find({ userID }).count();
 
 const getAllTasks = () => Task.find().sort({ date: -1 });
 
-const createTask = (title, description, userID) => new Task({ title, description, userID }).save();
+const createTask = (
+    title,
+    description,
+    userID,
+    gitLink) => new Task({ title, description, gitLink, userID }).save();
 
 const updateTask = (id, title) => Task.findByIdAndUpdate(id, { title });
 
