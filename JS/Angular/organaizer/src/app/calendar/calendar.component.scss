@@ -1,0 +1,32 @@
+
+
+table {
+    border-collapse: collapse;
+    margin: 2rem auto;
+
+    th {
+        width: 10rem;
+        height: 3rem;
+        padding-top: .7rem;
+        font-size: 16px;
+        text-transform: uppercase;
+        background: rgb(194, 204, 216);
+        border: 1px solid rgb(120, 120, 145);
+
+        &:not(:last-child) {
+            border-right: none;
+        };
+
+        &:first-child {
+            border-top-left-radius: 2.8rem;
+        };
+        
+        &:last-child {
+            border-top-right-radius: 2.8rem;
+        };
+    }
+    td {
+        border: 1px solid rgb(120, 120, 145);
+    }
+
+}

@@ -1,0 +1,19 @@
+<thead>
+    <tr>
+        <th>Mon</th>
+        <th>Tue</th>
+        <th>Wen</th>
+        <th>Thu</th>
+        <th>Fri</th>
+        <th>Sat</th>
+        <th>Sun</th>
+    </tr>
+</thead>
+
+<tbody>
+    <tr *ngFor="let week of calendar">
+        <td *ngFor="let day of week.days" [class.disabled]="day.disabled" (click)="select(day.value)">
+            <app-day [day]="day"></app-day>
+        </td>
+    </tr>
+</tbody>

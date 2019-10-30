@@ -1,0 +1,29 @@
+.container {
+    width: 80%;
+    min-height: 100px;
+    padding: 20px;
+    border: 1px solid grey;
+}
+
+.sqrt {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+    border: 1px solid grey;
+}
+.sqrt--done {
+    background: green;
+}
+
+h2 {
+    font-size: 28px;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+    border-bottom: 1px solid gray;
+}
+
+p {
+    font-size: 22px;
+    text-transform: capitalize;
+}
