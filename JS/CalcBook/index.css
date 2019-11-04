@@ -1,0 +1,52 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+body {
+    background-color: rgb(247, 247, 247);
+}
+
+main {
+    width: 90%;
+    margin: auto;
+    background: rgb(227, 233, 232);
+}
+header {
+    height: 50px;
+    padding: 10px;
+    text-align: center;
+    font-size: 46px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(179, 152, 5);
+    background-color: rgb(86, 86, 133);
+}
+
+form {
+    width: 50%;
+    margin: auto;
+    padding: 10px;
+    text-align: center;
+}
+
+.kof_input {
+    width: 60px;
+}
+
+.midde {
+    margin-top: 30px;
+}
+
+h5 {
+    margin: 10px
+}
+
+.button {
+    margin-top: 10px;
+    width: 310px;
+    height: 30px;
+    border: 1px solid rgb(71, 71, 161);
+    background-color: rgb(174, 174, 212);
+}
+
+.button:hover { opacity: .5;}
